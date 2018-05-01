@@ -1,0 +1,14 @@
+title: Caravel
+email: your-email@example.com
+description: >- #
+  redesigning
+baseurl: "" 
+url: "127.0.0.1:4000" 
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
