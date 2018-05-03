@@ -1,14 +1,16 @@
 title: Caravel
-email: your-email@example.com
-description: >- #
-  redesigning
-baseurl: "" 
-url: "127.0.0.1:4000" 
-twitter_username: jekyllrb
+email: contact@caravel.co.in
+description: >- # 
+  We ship beautiful, fully-tested applications for your organization.
+keywords: 
+  caravel, caravel tech, caravel ai, machine learning company, top ai companies, ai tech, ai consultancy, 
+  ai software consultancy, caravel one27 enterprises pvt ltd, caravel one27, caravel.co.in, digital studio
+baseurl: ""
+url: "https://caravel.co.in"
 github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap

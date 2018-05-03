@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar|Muli|Work+Sans');
+
+html, body {
+  /* Adjust font size */
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+body{
+  font-family: 'Work Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+/* ============================================================================== */
+/* Navbar */
+/* ============================================================================== */
+.nav-transparent{
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  color: #fff;
+  padding: 20px;
+}
+.navbar-brand{
+  font-weight: 700;
+  font-size: 28px;
+  color: #fff;
+  margin: 0px 20px;
+}
+.navbar-collapse {
+  padding: 0px 20px;
+}
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  border-color: transparent
+}
+
+.navbar-dark .navbar-toggler:active,
+.navbar-dark .navbar-toggler:focus {
+  outline: none;
+  color: #fff
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 18px;
+  font-weight: 900
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:active {
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .navbar-collapse{
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 0px 20px;
+  }
+}
+/* ============================================================================== */
+/* Hero Unit */
+/* ============================================================================== */
+#stars {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.hero-unit {
+  min-height: 600px;
+  height: 100vh;
+  background-color: #333;
+  background: radial-gradient(ellipse at center, rgba(50, 50, 50, 1) 0%, rgba(20, 20, 20, 1) 100%);
+  overflow: hidden;
+}
+.hero-unit-text-container{
+  text-align: center;
+  color: #fff;
+}
+.hero-unit-text-container h1{
+  font-weight: 700;
+  font-size: 3.6em;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+}
+.hero-unit-text-container p{
+  font-weight: 300;
+  font-size: 28px;
+}
+@media (max-width: 768px) {
+  .hero-unit-text-container h1{
+    font-size: 2.2em;
+  }
+  .hero-unit-text-container p{
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+
+/* ============================================================================== */
+/* Splitter Container */
+/* ============================================================================== */
+.splitview {
+  position: relative;
+  width: 100%;
+  min-height: 45vw;
+  overflow: hidden;
+}
+.panel {
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  overflow: hidden;
+}
+.panel .content {
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  color: #FFF;
+}
+.panel .description {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.panel img {
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottom {
+  background-color: rgb(44, 44, 44);
+  z-index: 1;
+}
+.bottom .description {
+  right: 5%;
+}
+.top {
+  background-color: rgb(77, 69, 173);
+  z-index: 2;
+  width: 50vw;
+}
+.top .description {
+  left: 5%;
+}
+/* Handle. */
+.handle {
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: rgb(253, 171, 0);
+  width: 5px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+/* Skewed. */
+.skewed .handle {
+  top: 50%;
+  transform: rotate(30deg) translateY(-50%);
+  height: 200%;
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  transform-origin: top;
+}
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+.skewed .top .content {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+@media (max-width: 768px) {
+  .splitter-container{
+    display: none;
+  }
+}
+
+/* ============================================================================== */
+/* Typography */
+/* ============================================================================== */
+.red {
+  background-image: linear-gradient(30deg,  #ffbf02 , #ed0082 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blue{
+ background-image: linear-gradient(30deg, #009cf3 ,#16d6d9);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.green{
+ background-image: linear-gradient(30deg,#16d6d9,#96cc29);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+/* hr color  gradient */
+.us-line-green {
+  height: 2px;
+  background-image: linear-gradient(30deg,#16d6d9,#96cc29);
+  margin-top: 5px;
+  width: 80px;
+}
+.us-line-blue {
+  height: 2px;
+  background-image: linear-gradient(30deg, #009cf3,#16d6d9);
+  margin-top: 5px;
+  width: 80px;
+}
+.us-line-red{
+  height: 2px;
+  background-image: linear-gradient(30deg, #ffbf02 , #ed0082);
+  margin-top: 5px;
+  width: 80px;
+}
+/* ============================================================================== */
+/* What we do section*/
+/* ============================================================================== */
+.whatwedo{
+  padding: 60px 0px;
+  background-color: #EEEEEE;
+}
+.hwd-card{
+  background-color: #fff;
+  padding: 40px 20px 20px 20px;
+}
+.hwd-card-container{
+  margin-bottom: 20px;
+}
+.hwd-card-line-1{
+  background-color: #31cce6;
+  height: 10px;
+}
+.hwd-card-line-2{
+  background-color: #e8799b;
+  height: 10px;
+}
+.hwd-card-line-3{
+  background-color: #55cc27;
+  height: 10px;
+}
+/* ============================================================================== */
+/* Services Box */
+/* ============================================================================== */
+.box{
+  width: 100%;
+  background: #f8f8f8;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.2);
+  padding: 60px 20px;
+}
+.box-container{
+  margin-bottom: 20px;
+}
+.box h3{
+  margin-bottom: 5px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.box p{
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 0px;
+}
+/* ============================================================================== */
+/* Grids */
+/* ============================================================================== */
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-p{
+  padding: 20px 0px;
+}
+
+
+
+
+
+/*button gradient */
+.contact-jobs-button-red {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none!important;
+  border-radius: 2px;
+  background-image: linear-gradient(30deg,#ed0082,#fa7d78);
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px 50px;
+}
+.contact-jobs-button-red:hover, .contact-jobs-button-red:focus {
+  color: #fff;
+}
+
+
+.contact-subs h6{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+}
+.contact-subs p{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.box-positions{
+  border: 1px solid #eee;
+  padding: 30px 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+}
+.box-positions h5{
+  margin-bottom: 0px;
+  color: $primary-dark;
+}
+.box-positions p{
+  margin-bottom: 0px;
+  color: $primary-dark;
+}
+.ser-card h5{
+  margin-top: 40px;
+
+}
+.ser-card p{
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.box-positions h5{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.box-positions p{
+  font-size: 18px;
+  font-weight: 300;
+}
+/* ============================================================================== */
+/* Footer */
+/* ============================================================================== */
+footer{
+  background-color: #111111;
+  padding: 30px 0px;
+}
+.footer-a >li>a{
+  color: #FFF;
+  text-decoration: none;
+}
+.footer-links ul>li{
+  display: inline-block;
+  padding: 0px 12px;
+  font-weight: 400;
+}
+.footer-links-main{
+  color: #FFF;
+}
+.footer-links-main >ul{
+  list-style: none;
+  padding-left: 0px;
+}
+.footer-links-main >ul>li{
+  font-size: 16px;
+  padding: 5px 0px;
+}
+.socail-icons li a{
+  color: #ccc;
+}
+.socail-icons li a:hover, .socail-icons li a:active{
+  color: #fff;
+  text-decoration: none;
+}
