@@ -171,20 +171,11 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================================== */
 /* Typography */
 /* ============================================================================== */
-.red {
-  background-image: linear-gradient(30deg,  #ffbf02 , #ed0082 );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.blue{
- background-image: linear-gradient(30deg, #009cf3 ,#16d6d9);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
-}
-.green{
- background-image: linear-gradient(30deg,#16d6d9,#96cc29);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+.us-line {
+  height: 2px;
+  background-color: black;
+  margin-top: 5px;
+  width: 50px;
 }
 /* hr color  gradient */
 .us-line-green {
