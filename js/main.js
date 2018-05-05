@@ -1,27 +1,32 @@
-var url = 'https://script.google.com/macros/s/AKfycbxI8sa-AmQFg3Wl2FU_S7-JSYbKs3Eszqp_UGe4LIOVkHZ_xWZq/exec'
+// file: script.js
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDikvTmeaviCcpNXpxBuy32yE7FO9t1dKg",
+  authDomain: "caravellabs-contact.firebaseapp.com",
+  databaseURL: "https://caravellabs-contact.firebaseio.com",
+  projectId: "caravellabs-contact",
+  storageBucket: "caravellabs-contact.appspot.com",
+  messagingSenderId: "635063450313"
+};
+firebase.initializeApp(config);
 
-$('#conatct-us-submit-form').on('click', function(e) {
-	var name = $('.name').val();
-	var email = $('.email').val();
-	var phone = $('.phone').val();
-	var message = $('.message').val();
-  e.preventDefault();
-  if(name == '' || email == '' || message == '') {
-  	alert('plz fill your details and message');
+//create firebase database reference
+var dbRef = firebase.database();
+var contactsRef = dbRef.ref('contacts');
+
+//save contact
+$('.addValue').on("click", function( event ) {  
+  event.preventDefault();
+  if( $('#name').val() != '' || $('#email').val() != '' ){
+    contactsRef.push({
+      name: $('.name').val(),
+      email: $('.email').val(),
+      message: $('.message').val()
+    })
+    alert('Your message has been sent. We\'ll get back to you as soon as possible.');
+    location.reload();
+  } else {
+    alert('Please fill atlease name or email!');
   }
-  else {
-		$.ajax({
-		  url: url,
-	    method: "GET",
-	    dataType: "json", 
-		  data: { 
-	  		"name": name,
-	  		"email": email, 
-	  		"phonenumber": phone,
-	  		"message": message
-	  	}
-	  })
-	  alert('Thank you we will keep in touch with you');
-	  location.reload();
-	}
 });
+
