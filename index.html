@@ -2,14 +2,13 @@
 layout: default
 title: Home
 ---
-<section class="hero-unit">
-  <canvas id="stars" class="h-100"></canvas>
+<section class="index-page-hero-unit">
   <div class="container h-100">
     <div class="row justify-content-center h-100">
       <div class="col-md-12 align-self-center text-center">
-        <div class="hero-unit-text-container" style="padding-top: 60px;">
+        <div class="hero-unit-text-container" style="padding-top: 40px;">
           <p class="text-uppercase">We ship beautiful, fully-tested applications for your organization</p>
-          <h1>WE DRIVE POSITIVE CHANGE FOR <span class="red"> PEOPLE</span>, <span class="blue">BUSINESSES</span> AND <span class="green">ORGANISATIONS</span></h1>
+          <h1 >WE DRIVE POSITIVE CHANGE FOR PEOPLE, BUSINESSES AND ORGANISATIONS</h1>
         </div>
       </div>
     </div>
@@ -22,32 +21,9 @@ title: Home
       <div class="col-md-8">
         <h2 class="text-capitalize">What we do</h2>
         <hr class="us-line-red">
-        <p style="font-weight: 300;">Caravel helps organisations create end-to-end software solutions for managing and maintaining their intellectual property and at the same time building effective communication mediums . This involves using an AI first approach that draws insights from behavioural patterns to help the organisation gauge employee performance.</p>
+        <p style="font-weight: 300;font-size: 120%;">Caravel helps organisations create end-to-end software solutions for managing and maintaining their intellectual property and at the same time building effective communication mediums . This involves using an AI first approach that draws insights from behavioural patterns to help the organisation gauge employee performance.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="splitter-container">
-  <div class="splitview skewed">
-    <div class="panel bottom">
-      <div class="content">
-        <div class="description">
-          <h1>To Development</h1>
-        </div>
-          <img src="/images/develop.png" alt="Development">
-      </div>
-    </div>
-    <div class="panel top">
-        <div class="content">
-            <div class="description">
-                <h1>From Design</h1>
-            </div>
-            <img src="/images/design.png" alt="Design">
-        </div>
-    </div>
-
-    <div class="handle"></div>
   </div>
 </section>
 
@@ -95,21 +71,84 @@ title: Home
   </div>
 </section>
 
+{% if site.posts != empty %}
+<section style="background-color: #F5F5F5;">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <div style="width: 100%;height: 300px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-9">
+              <div style="padding-top: 70px;font-size: 200%;">
+                {{ site.posts[0].title | truncatewords : 30 }}
+              </div>
+              <div style="padding-top: 5px;font-size: 120%;">
+                <div class="blog-author-datails">
+                  {{site.posts[0].author}} - {{site.posts[0].date | date: '%B %d'}} 
+                </div>
+              </div>
+              <div style="padding-top: 25px;">
+                <a href="{{site.posts[0].url}}" style="text-decoration: none;">
+                  <span class="start-project">
+                    Read more >
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {% for posts in site.posts | offset:1 | limit:3 %}
+    <div class="carousel-item">
+      <div style="width: 100%;height: 300px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-9">
+              <div style="padding-top: 70px;font-size: 200%;">
+                {{ posts.title | truncatewords : 30 }}
+              </div>
+              <div style="padding-top: 5px;font-size: 120%;">
+                <div class="blog-author-datails">
+                  {{posts.author}} - {{posts.date | date: '%B %d'}} 
+                </div>
+              </div>
+              <div style="padding-top: 25px;">
+                <a href="{{posts.url}}" style="text-decoration: none;">
+                  <span class="start-project">
+                    Read more >
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    &lsaquo;
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    &rsaquo;
+  </a>
+</div>
+</section>
+{% endif %}
+
 <section style="background-color: #333333;padding: 60px 0px;">
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
         <p style="text-transform: uppercase;font-weight: 300;color: #FFF;font-size: 14px;">Get in touch</p>
         <h1 class="hero-unit-primary-text" style="color: #fff;font-size: 40px;">WE’D LOVE TO HEAR FROM YOU</h1>
-        <h1 class="hero-unit-primary-text" style="color: #fff;font-size: 22px;"><span class="green">team@caravel.co.in</span></h1>
+        <h1 class="hero-unit-primary-text" style="color: #fff;font-size: 22px;">team@caravel.co.in</h1>
       </div>
       <div class="col-sm-4">
-        <img class="img-fluid center-block" src="https://cdn.discordapp.com/attachments/391971809563508738/414468814248476673/taxi.png" width="150">
+        <img class="img-fluid center-block" src="https://use.fontawesome.com/releases/v5.0.12/svgs/solid/paper-plane.svg" width="150" style="color:white;">
       </div>
     </div>
   </div>
 </section>
-
-<script type="text/javascript" src="https://rawgit.com/ironwallaby/delaunay/master/delaunay.js"></script>
-<script type="text/javascript" src="js/stars.js"></script>
-<script type="text/javascript" src="js/splitter.js"></script>

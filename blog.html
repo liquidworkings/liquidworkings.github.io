@@ -1,0 +1,35 @@
+---
+layout: posts
+title: blog
+---
+<section style="padding-top:100px">
+	{% if site.posts != empty %}
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-sm-9">
+				{% for post in site.posts %}
+					<div class="blog-data-area">
+						<a href="{{post.url}}" style="text-decoration: none;color: black;">
+					  	<h4>{{post.title}}</h4>
+							<div class="blog-light-color">{{post.content | strip_html | truncatewords : 30}}</div>
+						</a>
+						<div class="blog-author-datails">
+							<span class="blog-author">{{post.author}}</span>
+							<span class="blog-light-color">{{post.date | date: '%B %d'}}</span>	
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	{% else %}
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-sm-9 text-center">
+				<h3 style="padding-top: 30px;">No blogs available</h3>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+</section>
+

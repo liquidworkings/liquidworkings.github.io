@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include bloghead.html %}
+<body id="load">
+	<nav class="navbar navbar-expand-lg navbar-dark nav-transparent" style="padding: 9px;">
+	  <a class="navbar-brand" href="/blog"><img class="img-fluid" src="/images/caravel.png" width="150"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+	    <ul class="navbar-nav">
+	      <li class="nav-item nav-item-border-li">
+	        <a class="nav-link" href="/">Home
+	        <div class="nav-item-border"></div></a>
+	      </li>
+	      <li class="nav-item nav-item-border-li">
+	        <a class="nav-link" href="/blog">Blog
+	        <div class="nav-item-border"></div></a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div style="min-height: 89.8vh;">
+		<section class="hero-unit" style="height: auto;min-height: auto; padding: 110px 0px 60px 0px;">
+		  <div class="container">
+		    <div class="row justify-content-center">
+		      <div class="col-md-10">
+		        <div class="hero-unit-text-container" style="padding-top: 20px;">
+		          <h1 style="font-size: 300%;">{{ page.title }}</h1>
+		          <div style="padding:15px;"> 
+			          <h6>{{ page.date | date: '%B %d'}}</h6>
+			        </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
+		<section style="padding-top: 60px;">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						{{content}}
+						<div style="color: #454545">
+							<strong>Authored by <i>{{page.author}}</i></strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	{% include blogfooter.html %}
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="{{ '/js/main.js' | prepend: site.baseurl }}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+				var randomnumber = Math.floor(Math.random() * 6) + 1;
+				if(randomnumber == 1)
+					$('.hero-unit').css('background', 'linear-gradient(to bottom, #536976, #292e49)');	
+				else if(randomnumber == 2)
+					$('.hero-unit').css('background', 'linear-gradient(to top, #ad5389, #3c1053)');
+				else if(randomnumber == 3)
+					$('.hero-unit').css('background', 'linear-gradient(to top, #0f0c29, #302b63, #24243e)');
+				else if(randomnumber == 4)
+					$('.hero-unit').css('background', 'linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6)');
+				else if(randomnumber == 5)
+					$('.hero-unit').css('background', 'linear-gradient(to top, #ff9966, #ff5e62)');
+				else
+					('.hero-unit').css('background', 'linear-gradient(to top, #1f1c2c, #928dab)');
+		});
+</script>
+</body>
+</html>

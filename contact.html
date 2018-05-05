@@ -2,13 +2,18 @@
 layout: default
 title: Contact
 ---
-
+<script>
+  var scrollvalue = location.search.split('v=')[1];
+  if(scrollvalue === '1') {
+    window.scrollBy(0, 600);
+  }
+</script>
 <section class="hero-unit" style="height: auto;min-height: auto; padding: 120px 0px 60px 0px;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-10">
         <div class="hero-unit-text-container">
-          <h1 class="text-uppercase"><span class="red">Contact Us!</span></h1>
+          <h1 class="text-uppercase"><span>Contact Us!</span></h1>
         </div>
       </div>
     </div>
@@ -18,10 +23,39 @@ title: Contact
 <section class="text-center" style="padding: 60px;background-color: #FFFFFF">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-9">
         <h2>NEW BUSINESS</h2>
         <hr class="us-line-red">
-        <p style="font-weight: 300;">We offer exciting and economical options for your organisation which involves AI driven solutions. Want a Chatbot for your customer support? Wished to train your system with a personalised dataset? We would love to collaborate with you and build engaging products! Have an idea for an Artificial Intelligence application but lack the intellectual power to build it? We have answers to these questions and more.</p>
+        <p style="font-weight: 300; font-size: 120%">We offer exciting and economical options for your organisation which involves AI driven solutions. Want a Chatbot for your customer support? Wished to train your system with a personalised dataset? We would love to collaborate with you and build engaging products! Have an idea for an Artificial Intelligence application but lack the intellectual power to build it? We have answers to these questions and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 0px;background-color: #FAFAFA;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" style="padding-top: 4%;">
+        <h2>Getting in touch is easy</h2>
+        <p style="font-weight: 300; font-size: 130%; padding-top: 6%;">contact@caravel.co.in</p>  
+        <p style="font-weight: 300; font-size: 130%;">You can leave a message here <i class="fas fa-hand-point-right"></i></p>
+      </div>
+      <div class="col-md-6">
+        <form id="conatct-us-test-form">
+          <div class="form-group">
+            <label for="exampleInputName">Name</label>
+            <input type="text" class="form-control name" id="exampleInputName" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail">Email</label>
+            <input type="email" class="form-control email" id="exampleInputEmail" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea">Message</label>
+            <textarea class="form-control message" id="exampleFormControlTextarea" rows="3" placeholder="Enter message"></textarea>
+          </div>
+          <input type="submit" id="conatct-us-submit-form" value="Send Us" class="btn btn-primary" style="width: 25%; border-top-left-radius: 30px;border-top-right-radius: 30px;border-bottom-left-radius: 30px;border-bottom-right-radius: 30px;"></input>
+        </form>
       </div>
     </div>
   </div>
@@ -54,4 +88,8 @@ title: Contact
       </div>
     </div>
   </div>
+</section>
+
+<section class="map-footer-wrap">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.091135389266!2d78.37307691438087!3d17.455351588037892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93da8c1e7057%3A0x704b969717cc250d!2s91springboard+Hitec+City!5e0!3m2!1sen!2sin!4v1525505745262" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
