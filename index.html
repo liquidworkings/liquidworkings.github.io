@@ -6,7 +6,7 @@ title: Home
   <div class="container h-100">
     <div class="row justify-content-center h-100">
       <div class="col-md-12 align-self-center text-center">
-        <div class="hero-unit-text-container" style="padding-top: 40px;">
+        <div class="hero-unit-text-container" style="padding-top: 20px;">
           <p class="text-uppercase">We ship beautiful, fully-tested applications for your organization</p>
           <h1 >WE DRIVE POSITIVE CHANGE FOR PEOPLE, BUSINESSES AND ORGANISATIONS</h1>
           <a href="/contact?v=1" style="text-decoration: none;">
@@ -106,7 +106,7 @@ title: Home
       </div>
     </div>
     
-    {% for posts in site.posts | offset:1 | limit:3 %}
+    {% for posts in site.posts offset:1 limit:3 %}
     <div class="carousel-item">
       <div style="width: 100%;height: 300px;">
         <div class="container">
