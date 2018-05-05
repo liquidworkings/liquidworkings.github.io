@@ -4,7 +4,6 @@ $('#conatct-us-submit-form').on('click', function(e) {
 	var name = $('.name').val();
 	var email = $('.email').val();
 	var message = $('.message').val();
-	console.log(name + ' ' + email + ' ' + message);
   e.preventDefault();
   if(name == '' || email == '' || message == '') {
   	alert('plz fill your details and message');

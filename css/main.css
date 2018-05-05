@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================================== */
 :root {
   --primary-color: #1976D2;
-  --primary-dark-color: #0D47A1;
+  --primary-dark-color: #1565C0;
   --primary-background: #FFFFFF;
   --secondary-background: #F9F9F9;
   --dark-background: #000;
@@ -34,9 +34,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-primary {
   background-color: var(--primary-color);
+  padding: 7px 21px;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
 }
 .btn-primary:hover {
   background-color: var(--primary-dark-color);
+}
+.btn-rounded {
+  padding: 7px 28px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; 
 }
 
 /* ============================================================================== */

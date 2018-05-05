@@ -9,7 +9,7 @@ title: Home
         <div class="hero-unit-text-container" style="padding-top: 20px;">
           <p class="text-uppercase">We ship beautiful, fully-tested applications for your organization</p>
           <h1 >WE DRIVE POSITIVE CHANGE FOR PEOPLE, BUSINESSES AND ORGANISATIONS</h1>
-          <a href="/contact?v=1" class="btn btn-primary">
+          <a href="/contact?v=1" class="btn btn-primary btn-rounded">
               Schedule a call with us
           </a>
         </div>
@@ -68,7 +68,7 @@ title: Home
     <div class="row justify-content-center">
       <div class="col-md-10">
         <p style="font-size: 32px;font-weight: 500;line-height: 1.5;">Have a project or an idea you'd like to collaborate with caravel on? Interested in what caravel can do for you?</p>
-        <a href="/contact" class="btn btn-lg contact-jobs-button-red">Join Us</a>
+        <a href="/contact" class="btn btn-lg btn-primary contact-jobs-button-red">Join Us</a>
       </div>
     </div>
   </div>
@@ -77,67 +77,68 @@ title: Home
 {% if site.posts != empty %}
 <section style="background-color: #F5F5F5;">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner text-center">
-    <div class="carousel-item active">
-      <div style="width: 100%;height: 300px;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-9">
-              <div style="padding-top: 70px;font-size: 200%;">
-                {{ site.posts[0].title | truncatewords : 30 }}
-              </div>
-              <div style="padding-top: 5px;font-size: 120%;">
-                <div class="blog-author-datails">
-                  {{site.posts[0].author}} - {{site.posts[0].date | date: '%B %d'}} 
+    <div class="carousel-inner text-center">
+      <div class="carousel-item active">
+        <div style="width: 100%;height: 300px;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-9">
+                <div style="padding-top: 70px;font-size: 200%;">
+                  {{ site.posts[0].title | truncatewords : 30 }}
                 </div>
-              </div>
-              <div style="padding-top: 25px;">
-                <a href="{{site.posts[0].url}}" style="text-decoration: none;">
-                  <span class="start-project">
-                    Read more >
-                  </span>
-                </a>
+                <div style="padding-top: 5px;font-size: 120%;">
+                  <div class="blog-author-datails">
+                    {{site.posts[0].author}} - {{site.posts[0].date | date: '%B %d'}} 
+                  </div>
+                </div>
+                <div style="padding-top: 25px;">
+                  <a href="{{site.posts[0].url}}" style="text-decoration: none;">
+                    <span class="start-project">
+                      Read more >
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    {% for posts in site.posts offset:1 limit:3 %}
-    <div class="carousel-item">
-      <div style="width: 100%;height: 300px;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-9">
-              <div style="padding-top: 70px;font-size: 200%;">
-                {{ posts.title | truncatewords : 30 }}
-              </div>
-              <div style="padding-top: 5px;font-size: 120%;">
-                <div class="blog-author-datails">
-                  {{posts.author}} - {{posts.date | date: '%B %d'}} 
+      
+      {% for posts in site.posts offset:1 limit:3 %}
+      <div class="carousel-item">
+        <div style="width: 100%;height: 300px;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-9">
+                <div style="padding-top: 70px;font-size: 200%;">
+                  {{ posts.title | truncatewords : 30 }}
                 </div>
-              </div>
-              <div style="padding-top: 25px;">
-                <a href="{{posts.url}}" style="text-decoration: none;">
-                  <span class="start-project">
-                    Read more >
-                  </span>
-                </a>
+                <div style="padding-top: 5px;font-size: 120%;">
+                  <div class="blog-author-datails">
+                    {{posts.author}} - {{posts.date | date: '%B %d'}} 
+                  </div>
+                </div>
+                <div style="padding-top: 25px;">
+                  <a href="{{posts.url}}" style="text-decoration: none;">
+                    <span class="start-project">
+                      Read more >
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {% endfor %}
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        &lsaquo;
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        &rsaquo;
+      </a>
     </div>
-    {% endfor %}
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    &lsaquo;
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    &rsaquo;
-  </a>
-</div>
+  </div>
 </section>
 {% endif %}
 
