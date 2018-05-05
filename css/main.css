@@ -20,6 +20,25 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
+
+/* ============================================================================== */
+/* Main root colors  */
+/* ============================================================================== */
+:root {
+  --primary-color: #1976D2;
+  --primary-dark-color: #0D47A1;
+  --primary-background: #FFFFFF;
+  --secondary-background: #F9F9F9;
+  --dark-background: #000;
+  --secondary-dark-background: #212121;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark-color);
+}
+
 /* ============================================================================== */
 /* Navbar */
 /* ============================================================================== */
@@ -141,6 +160,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
   }
 }
+
+/* ============================================================================== */
+/* Buttons*/
+/* ============================================================================== */
+
+.btn-primary {
+
+}
+
+
 /* ============================================================================== */
 /* Typography */
 /* ============================================================================== */
@@ -239,27 +268,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0px;
 }
 
-
-
-
-
-/*button gradient */
-.contact-jobs-button-red {
-  margin: 0 auto;
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  border: none!important;
-  border-radius: 5px;
-  /*background-image: linear-gradient(30deg,#ed0082,#fa7d78);*/
-  background-color: #1976D2;
-  margin-top: 10px;
-  text-align: center;
-  padding: 10px 50px;
-}
-.contact-jobs-button-red:hover, .contact-jobs-button-red:focus {
-  color: #fff;
-}
 
 
 .contact-subs h6{
