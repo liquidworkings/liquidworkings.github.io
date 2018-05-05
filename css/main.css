@@ -173,28 +173,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================================== */
 .us-line {
   height: 2px;
-  background-color: black;
+  background-color: var(--primary-color);
   margin-top: 5px;
   width: 50px;
-}
-/* hr color  gradient */
-.us-line-green {
-  height: 2px;
-  background-color: black;
-  margin-top: 5px;
-  width: 80px;
-}
-.us-line-blue {
-  height: 2px;
-  background-color: black;
-  margin-top: 5px;
-  width: 80px;
-}
-.us-line-red{
-  height: 2px;
-  background-color: black;
-  margin-top: 5px;
-  width: 80px;
 }
 /* ============================================================================== */
 /* What we do section*/
