@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
-@import url('https://fonts.googleapis.com/css?family=Arimo');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 
 html, body {
@@ -15,12 +14,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
   text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
-body,p {
-  font-family: 'PT Sans', sans-serif;
+body {
+  font-family: 'Muli', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  font-family: 'Arimo', sans-serif;
 }
 /* ============================================================================== */
 /* Navbar */
@@ -70,9 +68,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #1976D2;
   color: white;
   width: 20%;
-  padding: 10px 20px;
-  border-radius: 5px; 
-  /*border-top-left-radius: 30px;
+  padding: 10px 25px;
+  border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;*/
