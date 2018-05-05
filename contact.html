@@ -35,24 +35,35 @@ title: Contact
 <section style="padding:60px 0px;background-color: #FAFAFA;">
   <div class="container">
     <div class="row">
-      <div class="col-md-6" style="padding-top: 4%;">
+      <div class="col-md-6" style="padding-top: 10%;">
         <h2>Getting in touch is easy</h2>
         <p style="font-weight: 300; font-size: 130%; padding-top: 6%;">contact@caravel.co.in</p>  
-        <p style="font-weight: 300; font-size: 130%;">You can leave a message here <i class="fas fa-hand-point-right"></i></p>
+        <p style="font-weight: 300; font-size: 130%;">You can leave a message here.</p>
       </div>
       <div class="col-md-6">
         <form id="conatct-us-test-form">
           <div class="form-group">
             <label for="exampleInputName">Name</label>
-            <input type="text" class="form-control name" id="exampleInputName" placeholder="Enter Name">
+            <input type="text" class="form-control name" id="exampleInputName">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail">Email</label>
-            <input type="email" class="form-control email" id="exampleInputEmail" placeholder="Enter email">
+            <input type="email" class="form-control email" id="exampleInputEmail">
+          </div>
+          <label for="basic-url">Phone number</label>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <select class="input-group" style="border: none;">
+                  <option>+91</option>
+                </select>
+              </span>
+            </div>
+            <input type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea">Message</label>
-            <textarea class="form-control message" id="exampleFormControlTextarea" rows="3" placeholder="Enter message"></textarea>
+            <textarea class="form-control message" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
           <input type="submit" id="conatct-us-submit-form" value="Send Us" class="btn btn-primary"></input>
         </form>

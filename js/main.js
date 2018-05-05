@@ -3,6 +3,7 @@ var url = 'https://script.google.com/macros/s/AKfycbxI8sa-AmQFg3Wl2FU_S7-JSYbKs3
 $('#conatct-us-submit-form').on('click', function(e) {
 	var name = $('.name').val();
 	var email = $('.email').val();
+	var phone = $('.phone').val();
 	var message = $('.message').val();
   e.preventDefault();
   if(name == '' || email == '' || message == '') {
@@ -16,6 +17,7 @@ $('#conatct-us-submit-form').on('click', function(e) {
 		  data: { 
 	  		"name": name,
 	  		"email": email, 
+	  		"phonenumber": phone,
 	  		"message": message
 	  	}
 	  })
