@@ -8,6 +8,7 @@ title: Contact
     window.scrollBy(0, 600);
   }
 </script>
+
 <section class="hero-unit" style="height: auto;min-height: auto; padding: 120px 0px 60px 0px;">
   <div class="container">
     <div class="row justify-content-center">
@@ -44,17 +45,19 @@ title: Contact
         <form id="conatct-us-test-form">
           <div class="form-group">
             <label for="exampleInputName">Name</label>
-            <input type="text" class="form-control name form-group-border" id="exampleInputName">
+            <input type="text" class="form-control name form-group-border" required="true" id="exampleInputName">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail">Email</label>
-            <input type="email" class="form-control email form-group-border" id="exampleInputEmail">
+            <input type="email" class="form-control email form-group-border" required="true" id="exampleInputEmail">
+            <div class="email-alert"></div>
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea">Message</label>
-            <textarea class="form-control message form-group-border" id="exampleFormControlTextarea" rows="3"></textarea>
+            <textarea class="form-control message form-group-border" required="true" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
-          <input type="submit" id="conatct-us-submit-form" value="Send Us" class="btn btn-primary addValue"></input>
+          <div class="form-group form-alert text-center"></div>
+          <input type="submit" id="conatct-us-submit-form" value="Send Us" class="form-group btn btn-primary addValue"></input>
         </form>
       </div>
     </div>

@@ -14,19 +14,47 @@ firebase.initializeApp(config);
 var dbRef = firebase.database();
 var contactsRef = dbRef.ref('contacts');
 
-//save contact
+// email validation
+var emailFlag = false;
+$('.email').on("focusout", function( event ) {
+	var reg_email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  	if($('.email').val().match(reg_email)) {
+  		emailFlag = true;
+		}
+		else {
+			$('.email-alert').text('Email format: exampe@domaim.com');
+		}
+}); 
+
+// save contact
 $('.addValue').on("click", function( event ) {  
   event.preventDefault();
-  if( $('#name').val() != '' || $('#email').val() != '' ){
-    contactsRef.push({
-      name: $('.name').val(),
-      email: $('.email').val(),
-      message: $('.message').val()
-    })
-    alert('Your message has been sent. We\'ll get back to you as soon as possible.');
-    location.reload();
+  if( $('.name').val() != '' || $('.email').val() != '' || $('.message').val() != '' ) {
+  	if(emailFlag === true) {
+	    contactsRef.push({
+	      name: $('.name').val(),
+	      email: $('.email').val(),
+	      message: $('.message').val()
+	    })
+	    swal({
+			  text: "Your message has been sent. We'll get back to you as soon as possible.",
+			  icon: "success",
+			  button: {
+			  	text: "ok",
+			  	value: true
+			  },
+			})
+			.then((value) => {
+				if(value == true) {
+					location.href = '/'
+				}
+			})  	} else {
+  		$('.form-alert').addClass("formalert");
+  		$('.form-alert').text('Check your email');
+  	}
   } else {
-    alert('Please fill atlease name or email!');
+  	$('.form-alert').addClass("formalert");
+    $('.form-alert').text('Please fill all the fields!');
   }
 });
 

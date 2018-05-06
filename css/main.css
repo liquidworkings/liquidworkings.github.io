@@ -376,3 +376,9 @@ footer{
 .form-group-border {
   border-radius: 2px; 
 }
+.formalert{
+  border: 1px solid #EF9A9A;
+  background-color: #FFCDD2;
+  padding:10px 0px;
+  border-radius: 2px;
+}
