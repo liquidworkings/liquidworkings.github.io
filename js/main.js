@@ -23,7 +23,7 @@ $('.email').on("focusout", function( event ) {
   		$('.email-alert').text('');
 		}
 		else {
-			$('.email-alert').text('Format: exampe@domain.com');
+			$('.email-alert').text('example@domain.com');
 		}
 }); 
 
