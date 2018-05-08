@@ -52,8 +52,9 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px; 
 }
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-     box-shadow: none; 
+.btn,.btn:hover,.btn:active,.btn:focus-within{
+  border: 0;
+  outline: 0;
 }
 .btn-joinus {
   padding: 12px 36px;
