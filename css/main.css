@@ -119,8 +119,10 @@ h1, h2, h3, h4, h5, h6 {
 .index-page-hero-unit {
   height: 450px;
   background-color: #333;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/images/home-background.jpg) no-repeat center center;
-  overflow: hidden;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/images/home-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .hero-unit {
   height: 350px;
@@ -387,7 +389,7 @@ footer{
   padding: 10px;
   padding-left: 20px;
   margin: 10px 60px;
-  width: 100%;
+  width: 90%;
   border-radius: 8px;
   position: relative;
 }
