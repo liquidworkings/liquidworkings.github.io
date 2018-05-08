@@ -63,59 +63,23 @@ h1, h2, h3, h4, h5, h6 {
 /* ============================================================================== */
 /* Navbar */
 /* ============================================================================== */
-.nav-transparent{
-  background: transparent;
-  position: absolute;
-  width: 100%;
-  z-index: 999;
-  color: #fff;
-  padding: 20px;
-}
+
 .navbar-brand{
-  font-weight: 700;
-  font-size: 28px;
-  color: #fff;
+  background-color: black;
   margin: 0px 20px; 
+}
+.nav-item-border-li a span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.text-black {
+  color: #212121;
 }
 .navbar-collapse {
   padding: 0px 20px;
 }
-.navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 1);
-  font-weight: 700;
-  border-color: transparent
-}
-
-.navbar-dark .navbar-toggler:active,
-.navbar-dark .navbar-toggler:focus {
-  outline: none;
-  color: #fff
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 18px;
-  font-weight: 900
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:active {
-  color: #fff;
-}
-
-.navlink {
-  text-decoration: none;
-  color: white;
-}
-
-.navlink:hover {
-  text-decoration: none;
-  color: gray;
-}
-
 @media (max-width: 991px) {
   .navbar-collapse{
-    background-color: rgba(20, 20, 20, 0.8);
     padding: 0px 20px;
   }
 }
@@ -130,8 +94,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-item-border-li:hover .nav-item-border {
   width: 100%;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #212121;
 }
+.footernavlink {
+  text-decoration: none;
+  color: white;
+}
+.footernavlink:hover {
+  text-decoration: none;
+  color: gray;
+}
+
 /* ============================================================================== */
 /* Hero Unit */
 /* ============================================================================== */
@@ -142,8 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 .index-page-hero-unit {
-  min-height: 600px;
-  height: 100vh;
+  height: 450px;
   background-color: #333;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/images/home-background.jpg) no-repeat center center;
   overflow: hidden;
@@ -160,15 +132,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .hero-unit-text-container h1{
-  font-size: 260%;
-  margin-bottom: 25px;
+  font-size: 200%;
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: 1.5px;
 }
 .hero-unit-text-container p{
   font-weight: 300;
-  font-size: 28px;
+  font-size: 20px;
 }
 @media (max-width: 768px) {
   .hero-unit-text-container h1{
@@ -192,8 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 /* What we do section*/
 /* ============================================================================== */
 .whatwedo{
-  padding: 60px 0px;
-  background-color: #EEEEEE;
+  padding: 40px 0px;
 }
 .hwd-card{
   background-color: #fff;
@@ -396,4 +367,39 @@ footer{
 
 .swal-text {
   text-align: center;
+}
+
+/*time line*/
+.timeline-container {
+  padding: 10px;
+  position: relative;
+}
+.timeline-container:before {
+  content: '';
+  width: 2px;
+  height: 83%;
+  background: var(--primary-color); 
+  position: absolute;
+  left: 20px;
+  top: 10%;
+}
+.timeline-content {
+  padding: 10px;
+  padding-left: 20px;
+  margin: 10px 60px;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+}
+.timeline-content:after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--primary-color);
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: -61px;
+  top: 25%;
+  transform: translateY(-50%);
 }
