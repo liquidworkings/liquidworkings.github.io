@@ -39,6 +39,7 @@ $('.addValue').on("click", function( event ) {
 	    })
 	    swal({
 			  text: "Your message has been sent. We'll get back to you as soon as possible.",
+			  align: "center",
 			  icon: "success",
 			  button: {
 			  	text: "ok",
