@@ -20,16 +20,17 @@ $('.email').on("focusout", function( event ) {
 	var reg_email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   	if($('.email').val().match(reg_email)) {
   		emailFlag = true;
+  		$('.email-alert').text('');
 		}
 		else {
-			$('.email-alert').text('Email format: exampe@domaim.com');
+			$('.email-alert').text('Format: exampe@domain.com');
 		}
 }); 
 
 // save contact
 $('.addValue').on("click", function( event ) {  
   event.preventDefault();
-  if( $('.name').val() != '' || $('.email').val() != '' || $('.message').val() != '' ) {
+  if( $('.name').val() != '' && $('.email').val() != '' && $('.message').val() != '') {
   	if(emailFlag === true) {
 	    contactsRef.push({
 	      name: $('.name').val(),

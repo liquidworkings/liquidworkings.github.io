@@ -102,6 +102,17 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-dark .navbar-nav .nav-link:active {
   color: #fff;
 }
+
+.navlink {
+  text-decoration: none;
+  color: white;
+}
+
+.navlink:hover {
+  text-decoration: none;
+  color: gray;
+}
+
 @media (max-width: 991px) {
   .navbar-collapse{
     background-color: rgba(20, 20, 20, 0.8);

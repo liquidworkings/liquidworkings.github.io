@@ -3,15 +3,52 @@ layout: default
 title: Home
 ---
 <section class="index-page-hero-unit">
-  <div class="container h-100">
-    <div class="row justify-content-center h-100">
-      <div class="col-md-12 align-self-center text-center">
-        <div class="hero-unit-text-container" style="padding-top: 20px;">
-          <p class="text-uppercase">We ship beautiful, fully-tested applications for your organization</p>
-          <h1 >WE DRIVE POSITIVE CHANGE FOR PEOPLE, BUSINESSES AND ORGANISATIONS</h1>
-          <a href="/contact?v=1" class="btn btn-primary btn-rounded btn-lg">
-              Schedule a call
-          </a>
+  <div class="h-100">
+  <div class="row justify-content-center h-100"">
+    <div class="col-md-12 align-self-center">
+      <div class="hero-unit-text-container text-center">
+        <div class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div>
+                  <h1>Start a Machine Learning project with us.</h1>
+                </div>
+                <div>
+                  <h5>As a Machine Learning Consulting company, we offer end-to-end Machine Learning, Data Science, AI & software development.</h5>
+                </div>
+                <div style="padding-top: 15px;">
+                  <div class="btn btn-primary"> Learn More </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div>
+                  <h1>Start a Machine Learning project with us.</h1>
+                </div>
+                <div>
+                  <h5>As a Machine Learning Consulting company, we offer end-to-end Machine Learning, Data Science, AI & software development.</h5>
+                </div>
+                <div style="padding-top: 15px;">
+                  <div class="btn btn-primary"> Learn More </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div>
+                  <h1>Start a Machine Learning project with us.</h1>
+                </div>
+                <div>
+                  <h5>As a Machine Learning Consulting company, we offer end-to-end Machine Learning, Data Science, AI & software development.</h5>
+                </div>
+                <div style="padding-top: 15px;">
+                  <div class="btn btn-primary"> Learn More </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,21 +79,27 @@ title: Home
       <div class="col-sm-6">
         <div style="padding: 15px 10px; border: 1px solid lightgray; border-radius: 3px;">
           <div class="row" style="padding-top: 15px;">
-            <div class="col-sm-3 text-center"><i class="fab fa-android" style="font-size: 70px;"></i></div>
+            <div class="col-sm-3 text-center">
+              <img class="img-fluid" src="/images/data-analytics-wheel-graphic.svg" width="60">
+            </div>
             <div class="col-sm-9">
               <h6>NLP (Text Processing)</h6>
               <p>Extract knowledge from human-language text - figures, names, relationships, entities; rank texts based on relevance to speed up reporting and analysis</p>
             </div>
           </div>
           <div class="row" style="padding: 20px 0px;">
-            <div class="col-sm-3 text-center"><i class="fab fa-android" style="font-size: 70px;"></i></div>
+            <div class="col-sm-3 text-center">
+              <img class="img-fluid" src="/images/analytics-monitor.svg" width="60">
+            </div>
             <div class="col-sm-9">
               <h6>Computer Vision</h6>
               <p>Detect objects on image, classify images into topic groups or by presence of a feature</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-3 text-center"><i class="fab fa-android" style="font-size: 70px;"></i></div>
+            <div class="col-sm-3 text-center">
+              <img class="img-fluid" src="/images/increasing-stocks-graphic-of-bars.svg" width="60">
+            </div>
             <div class="col-sm-9">
               <h6>Predictive Analytics</h6>
               <p>Predict the market conditions or product sales.<br/>Understand customers, prevent churn and optimize resource usage and efficiency</p>
@@ -131,7 +174,7 @@ title: Home
                 </div>
                 <div style="padding-top: 25px;">
                   <a href="{{site.posts[0].url}}" style="text-decoration: none;">
-                    <span class="start-project">
+                    <span class="btn btn-primary">
                       Read more >
                     </span>
                   </a>
@@ -158,7 +201,7 @@ title: Home
                 </div>
                 <div style="padding-top: 25px;">
                   <a href="{{posts.url}}" style="text-decoration: none;">
-                    <span class="start-project">
+                    <span class="btn btn-primary">
                       Read more >
                     </span>
                   </a>
@@ -168,13 +211,13 @@ title: Home
           </div>
         </div>
       </div>
-      {% endfor %}
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         &lsaquo;
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         &rsaquo;
       </a>
+      {% endfor %}
     </div>
   </div>
 </section>
